@@ -1,1 +1,71 @@
-
+body {
+font-family: "Segoe UI", sans-serif;
+background: #f4f7f9;
+margin: 0;
+padding: 40px;
+}
+.container {
+max-width: 800px;
+margin: auto;
+}
+.header {
+background: #00a3e0;
+color: white;
+text-align: center;
+padding: 30px;
+border-radius: 12px;
+margin-bottom: 20px;
+}
+.header h1 {
+margin: 0;
+}
+.card {
+background: white;
+padding: 30px;
+border-radius: 12px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+#progress {
+font-weight: bold;
+color: #0077c8;
+}
+ 
+#playBtn {
+background: #00a3e0;
+color: white;
+border: none;
+padding: 15px 25px;
+border-radius: 8px;
+font-size: 18px;
+cursor: pointer;
+}
+#playBtn:hover {
+background: #0085b6;
+}
+#nextBtn {
+background: #0077c8;
+color: white;
+border: none;
+padding: 12px 24px;
+border-radius: 8px;
+margin-top: 20px;
+cursor: pointer;
+}
+#nextBtn:hover {
+background: #005ea0;
+}
+.option {
+display: block;
+margin: 12px 0;
+padding: 12px;
+border: 1px solid #d9e3ea;
+border-radius: 8px;
+}
+.option:hover {
+background: #f0f8fb;
+}
+#feedback {
+margin-top: 20px;
+font-weight: bold;
+text-align: center;
+}
