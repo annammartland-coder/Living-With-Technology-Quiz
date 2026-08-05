@@ -1,4 +1,5 @@
 console.log("Quiz loaded");
+
 const questions = [
 {
     sound: "sounds/Nokia.m4a",
