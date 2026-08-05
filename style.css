@@ -6,24 +6,35 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(160deg,#f5e8ff 0%,#ede0ff 100%);
+
+    background: linear-gradient(
+        160deg,
+        #f5e8ff 0%,
+        #ede0ff 100%
+    );
+
     display: flex;
     justify-content: center;
+
     padding: 20px;
 }
 
 .card {
-    background: white;
     max-width: 650px;
     width: 100%;
+
+    background: white;
+
     border-radius: 16px;
+
     overflow: hidden;
+
     box-shadow: 0 8px 32px rgba(92,0,163,0.18);
 }
 
 .header {
     background: #3d1152;
-    padding: 16px;
+    padding: 18px;
     text-align: center;
 }
 
@@ -35,6 +46,7 @@ body {
 .wellbeing-logo {
     display: block;
     width: 75%;
+    max-width: 450px;
     margin: 25px auto;
 }
 
@@ -55,8 +67,8 @@ body {
 .instructions {
     margin: 0 20px 20px;
     padding: 15px;
-    background: #f6efff;
     border-radius: 12px;
+    background: #f6efff;
 }
 
 .instructions h2 {
@@ -86,86 +98,106 @@ body {
 .progress-bar {
     width: 100%;
     height: 12px;
-    background: #e4d3f4;
     border-radius: 20px;
+    background: #e3d3f0;
     margin-bottom: 20px;
 }
 
 #progressFill {
     height: 100%;
     width: 0%;
+
     border-radius: 20px;
+
     background: linear-gradient(
         90deg,
         #6b04a8,
         #c530ff
     );
+
+    transition: 0.3s;
 }
 
 .play-button {
     width: 100%;
-    padding: 15px;
+
+    padding: 16px;
+
     border: none;
+
     border-radius: 12px;
-    margin-bottom: 20px;
+
+    cursor: pointer;
+
     font-size: 18px;
     font-weight: bold;
+
     color: white;
-    cursor: pointer;
 
     background: linear-gradient(
         135deg,
         #6b04a8,
         #c530ff
     );
+
+    margin-bottom: 20px;
 }
 
-.submit-button {
-    width: 100%;
-    padding: 15px;
-    border: none;
-    border-radius: 12px;
-    margin-top: 15px;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-    cursor: pointer;
-    background: #3d1152;
+.play-button:hover {
+    opacity: 0.95;
 }
 
 .option {
     display: block;
+
     border: 2px solid #6b04a8;
+
     border-radius: 12px;
-    padding: 15px;
+
+    padding: 14px;
+
     margin-bottom: 12px;
+
     cursor: pointer;
 }
 
 .option:hover {
-    background: #f7f0ff;
+    background: #f8f1ff;
 }
 
 .option input {
     margin-right: 10px;
 }
 
-#feedback {
-    margin-top: 15px;
-    text-align: center;
+.submit-button {
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    color: white;
+
+    font-size: 16px;
     font-weight: bold;
+
+    background: #3d1152;
 }
 
 .footer {
     text-align: center;
     padding: 20px;
-    color: #666;
+    color: #777;
     font-size: 12px;
 }
 
 .result-screen {
     text-align: center;
-    padding: 40px 20px;
+    padding: 30px;
 }
 
 .result-screen h1 {
