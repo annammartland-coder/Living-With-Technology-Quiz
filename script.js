@@ -18,20 +18,21 @@ const questions = [
         "Windows XP",
         "Slack",
         "iPhone",
-        "MSN Messenger"
+        "MSN"
     ]
 },
 
 {
     sound: "sounds/MSN.m4a",
-    answer: "MSN Messenger",
+    answer: "MSN",
     options: [
-        "MSN Messenger",
+        "MSN",
         "PlayStation",
         "Outlook",
         "Teams"
     ]
 }
+
 ];
 
 let currentQuestion = 0;
@@ -87,7 +88,7 @@ document.getElementById("nextBtn").addEventListener("click", () => {
         document.querySelector(".card").innerHTML = `
             <h2>Quiz Complete!</h2>
             <h1>${score}/${questions.length}</h1>
-            <p>Thanks for taking part!</p>
+            <p>Thanks for taking part in the Living With Technology challenge!</p>
         `;
     }
 });
