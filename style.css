@@ -89,7 +89,7 @@ body {
     padding: 20px;
 }
 
-#progress {
+.progress {
     color: #6b04a8;
     font-weight: bold;
     margin-bottom: 10px;
