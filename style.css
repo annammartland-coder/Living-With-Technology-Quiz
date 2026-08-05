@@ -1,125 +1,194 @@
-<style>
-* { margin:0; padding:0; box-sizing:border-box; }
-
-.instructions {
-  margin: 0 20px 10px;
-  padding: 15px;
-  background: #f6efff;
-  border-radius: 12px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.instructions h2 {
-  color: #5c00a3;
-  font-size: 16px;
-  margin-bottom: 8px;
+:root {
+    --aveva-dark: #3d1152;
+    --aveva-purple: #6b04a8;
+    --aveva-pink: #c530ff;
+    --bg: #efe6f7;
 }
 
-.instructions ul {
-  padding-left: 18px;
-}
-
-.instructions li {
-  font-size: 13px;
-  margin-bottom: 5px;
-  color: #333;
-    
-}
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(160deg,#f5e8ff 0%,#ede0ff 100%);
-  display: flex;
-  justify-content: center;
-  padding: 20px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(160deg, #f5e8ff 0%, #ede0ff 100%);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
-.card {
-  background: white;
-  max-width: 600px;
-  width: 100%;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 8px 32px rgba(92,0,163,0.18);
+.main-card {
+    background: white;
+    max-width: 650px;
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(92, 0, 163, 0.18);
 }
 
-.header {
-  background: #3b0070;
-  padding: 16px;
-  text-align: center;
+.top-banner {
+    background: var(--aveva-dark);
+    padding: 16px;
+    text-align: center;
 }
 
-.AVEVA-logo {
-  max-height: 50px;
+.logo {
+    max-height: 50px;
     width: auto;
+}
+
+.content {
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--aveva-purple);
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.info-box {
+    background: #f6efff;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 25px;
+}
+
+.info-box h3 {
+    color: var(--aveva-purple);
+    margin-bottom: 10px;
+}
+
+.info-box ul {
+    padding-left: 20px;
+}
+
+.info-box li {
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+#progress {
+    color: var(--aveva-purple);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background: #e5d5f2;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+#progressFill {
+    height: 100%;
+    width: 0%;
+    border-radius: 20px;
+    background: linear-gradient(
+        90deg,
+        var(--aveva-purple),
+        var(--aveva-pink)
+    );
+    transition: 0.4s;
+}
+
+.play-button {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 20px;
+
+    border: none;
+    border-radius: 12px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        var(--aveva-purple),
+        var(--aveva-pink)
+    );
+
+    cursor: pointer;
+}
+
+.play-button:hover {
+    opacity: 0.95;
+}
+
+.option {
     display: block;
-    margin: 0 auto;
+
+    border: 2px solid var(--aveva-purple);
+
+    padding: 14px;
+    border-radius: 12px;
+
+    margin-bottom: 12px;
+
+    cursor: pointer;
 }
 
-
-.Wellbeing-Network-Logo {
-  display: block;
-  max-width: 85%;
-  margin: 20px auto 10px;
-  background: transparent;
-  padding: 0;
-  border-radius: 0;
+.option:hover {
+    background: #f8f1ff;
 }
 
-.title-section {
-  text-align: center;
-  padding: 20px;
+.option input {
+    margin-right: 10px;
 }
 
-.title-section h1 {
-  color: #5c00a3;
-  font-size: 26px;
-  margin-bottom: 8px;
+.submit-button {
+    width: 100%;
+    padding: 16px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: var(--aveva-dark);
+
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
 }
 
-.title-section p {
-  font-size: 13px;
-  color: #555;
-}
-
-.menu {
-  padding: 20px;
-}
-
-.menu-title {
-  color: #5c00a3;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.menu-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 2px solid #5c00a3;
-  border-radius: 12px;
-  padding: 12px 14px;
-  margin-bottom: 10px;
-  text-decoration: none;
-  color: #1a1a1a;
-  transition: transform .1s;
-}
-
-.menu-card:hover {
-  transform: scale(1.03);
-  background: #f6efff;
-}
-
-.menu-text {
-  font-weight: 600;
-  font-size: 14px;
-}
-
-.menu-icon {
-  color: #5c00a3;
+#feedback {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
 }
 
 .footer {
-  text-align: center;
-  padding: 15px;
-  font-size: 12px;
-  color: #777;
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    font-size: 12px;
+}
+
+.result-screen {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.result-screen h1 {
+    color: var(--aveva-purple);
+    font-size: 60px;
+}
+
+.result-screen h2 {
+    color: var(--aveva-dark);
 }
