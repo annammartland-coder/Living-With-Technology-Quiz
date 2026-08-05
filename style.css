@@ -1,3 +1,10 @@
+:root {
+    --aveva-dark: #3d1152;
+    --aveva-purple: #6b04a8;
+    --aveva-pink: #c530ff;
+    --aveva-light: #f7f1fb;
+}
+
 body {
 font-family: "Segoe UI", sans-serif;
 background: #f4f7f9;
@@ -9,16 +16,32 @@ max-width: 800px;
 margin: auto;
 }
 .header {
-background: #00a3e0;
-color: white;
-text-align: center;
-padding: 30px;
-border-radius: 12px;
-margin-bottom: 20px;
+    background: linear-gradient(
+        135deg,
+        var(--aveva-dark),
+        var(--aveva-purple),
+        var(--aveva-pink)
+    );
+
+    color: white;
+    text-align: center;
+    padding: 40px;
+    border-radius: 16px;
+    margin-bottom: 20px;
 }
 .header h1 {
 margin: 0;
 }
+body {
+    font-family: "Segoe UI", sans-serif;
+    background:
+        linear-gradient(
+            180deg,
+            #faf7fc,
+            #f4edf8
+        );
+}
+``
 .card {
 background: white;
 padding: 30px;
