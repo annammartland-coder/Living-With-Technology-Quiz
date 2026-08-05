@@ -103,7 +103,7 @@ body {
     margin-bottom: 20px;
 }
 
-#progressFill {
+.progressFill {
     height: 100%;
     width: 0%;
 
