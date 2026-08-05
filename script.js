@@ -31,7 +31,7 @@ const questions = [
         "Outlook",
         "Teams"
     ]
-
+}
 ];
 
 let currentQuestion = 0;
@@ -48,8 +48,6 @@ function loadQuestion() {
     document.getElementById("progress").textContent =
         `Question ${currentQuestion + 1} of ${questions.length}`;
 
-    document.getElementById("feedback").textContent = "";
-
     document.getElementById("options").innerHTML =
         question.options.map(option => `
             <label class="option">
@@ -65,13 +63,12 @@ document.getElementById("playBtn").addEventListener("click", () => {
 
 document.getElementById("nextBtn").addEventListener("click", () => {
 
-    const selected =
-        document.querySelector('input[name="answer"]:checked');
+    const selected = document.querySelector(
+        'input[name="answer"]:checked'
+    );
 
     if (!selected) {
-
         alert("Please choose an answer.");
-
         return;
     }
 
@@ -87,35 +84,12 @@ document.getElementById("nextBtn").addEventListener("click", () => {
 
     } else {
 
-        let badge;
-
-        if (score === 7) {
-            badge = "🏆 Technology Time Traveller";
-        } else if (score >= 5) {
-            badge = "💻 Digital Expert";
-        } else if (score >= 3) {
-            badge = "📱 Tech Enthusiast";
-        } else {
-            badge = "🔌 Digital Explorer";
-        }
-
         document.querySelector(".card").innerHTML = `
             <h2>Quiz Complete!</h2>
-
-            <p>Your score was:</p>
-
-            <h1>${score} / ${questions.length}</h1>
-
-            <h3>${badge}</h3>
-
-            <p>
-                Thanks for taking part in our
-                <strong>Living With Technology</strong>
-                wellbeing activity.
-            </p>
+            <h1>${score}/${questions.length}</h1>
+            <p>Thanks for taking part!</p>
         `;
     }
-
 });
 
 loadQuestion();
