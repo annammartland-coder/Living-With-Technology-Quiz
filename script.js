@@ -1,23 +1,44 @@
 const questions = [
-
 {
     sound: "sounds/Nokia.m4a",
     answer: "Nokia",
-    options: ["Nokia", "Teams", "Outlook", "Game Boy"]
+    options: [
+        "Nokia",
+        "Windows XP",
+        "iPhone",
+        "MSN"
+    ]
 },
-
 {
     sound: "sounds/WindowsXP.m4a",
     answer: "Windows XP",
-    options: ["Windows XP", "Slack", "MSN", "iPhone"]
+    options: [
+        "Windows XP",
+        "Nokia",
+        "MSN",
+        "iPhone"
+    ]
 },
-
 {
     sound: "sounds/MSN.m4a",
     answer: "MSN",
-    options: ["MSN", "Teams", "Outlook", "PlayStation"]
+    options: [
+        "MSN",
+        "Windows XP",
+        "iPhone",
+        "Nokia"
+    ]
+},
+{
+    sound: "sounds/Iphone.m4a",
+    answer: "iPhone",
+    options: [
+        "iPhone",
+        "MSN",
+        "Windows XP",
+        "Nokia"
+    ]
 }
-
 ];
 
 let currentQuestion = 0;
@@ -75,13 +96,21 @@ document.getElementById("nextBtn").addEventListener("click", () => {
 
     } else {
 
+        let message = "📱 Digital Explorer";
+
+        if (score === questions.length) {
+            message = "🏆 Technology Time Traveller";
+        } else if (score >= 3) {
+            message = "💻 Tech Enthusiast";
+        }
+
         document.querySelector(".quiz-section").innerHTML = `
             <div class="result-screen">
                 <h1>${score}/${questions.length}</h1>
-                <h2>🏆 Technology Time Traveller</h2>
+                <h2>${message}</h2>
                 <p>
                     Thanks for taking part in the
-                    Living With Technology challenge.
+                    Living With Technology challenge!
                 </p>
             </div>
         `;
