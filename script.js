@@ -3,6 +3,7 @@ const questions = [
 {
     sound: "sounds/Nokia.m4a",
     answer: "Nokia",
+    
     options: [
         "Nokia",
         "Outlook",
@@ -82,15 +83,25 @@ document.getElementById("nextBtn").addEventListener("click", () => {
     if (currentQuestion < questions.length) {
 
         loadQuestion();
+      document.getElementById("progressFill").style.width =
+`${((currentQuestion + 1) / questions.length) * 100}%`;  
 
     } else {
 
-        document.querySelector(".card").innerHTML = `
-            <h2>Quiz Complete!</h2>
-            <h1>${score}/${questions.length}</h1>
-            <p>Thanks for taking part in the Living With Technology challenge!</p>
-        `;
-    }
-});
+       document.querySelector(".card").innerHTML = `
+    <div class="result">
 
-loadQuestion();
+        <h1>🏆</h1>
+
+        <h2>Technology Time Traveller</h2>
+
+        <h1>${score}/${questions.length}</h1>
+
+        <p>
+            You've successfully navigated
+            the sounds that shaped our
+            digital lives.
+        </p>
+
+    </div>
+`;
