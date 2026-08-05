@@ -6,29 +6,22 @@
 
 body {
     font-family: Arial, sans-serif;
-
     background: linear-gradient(
         160deg,
         #f5e8ff 0%,
         #ede0ff 100%
     );
-
     display: flex;
     justify-content: center;
-
     padding: 20px;
 }
 
 .card {
     max-width: 650px;
     width: 100%;
-
     background: white;
-
     border-radius: 16px;
-
     overflow: hidden;
-
     box-shadow: 0 8px 32px rgba(92,0,163,0.18);
 }
 
@@ -39,7 +32,7 @@ body {
 }
 
 .aveva-logo {
-    height: 50px;
+    height: 45px;
     width: auto;
 }
 
@@ -89,7 +82,7 @@ body {
     padding: 20px;
 }
 
-.progress {
+#progress {
     color: #6b04a8;
     font-weight: bold;
     margin-bottom: 10px;
@@ -103,43 +96,32 @@ body {
     margin-bottom: 20px;
 }
 
-.progressFill {
+#progressFill {
     height: 100%;
     width: 0%;
-
     border-radius: 20px;
-
     background: linear-gradient(
         90deg,
         #6b04a8,
         #c530ff
     );
-
     transition: 0.3s;
 }
 
 .play-button {
     width: 100%;
-
     padding: 16px;
-
     border: none;
-
     border-radius: 12px;
-
     cursor: pointer;
-
     font-size: 18px;
     font-weight: bold;
-
     color: white;
-
     background: linear-gradient(
         135deg,
         #6b04a8,
         #c530ff
     );
-
     margin-bottom: 20px;
 }
 
@@ -149,15 +131,10 @@ body {
 
 .option {
     display: block;
-
     border: 2px solid #6b04a8;
-
     border-radius: 12px;
-
     padding: 14px;
-
     margin-bottom: 12px;
-
     cursor: pointer;
 }
 
@@ -171,20 +148,13 @@ body {
 
 .submit-button {
     width: 100%;
-
     padding: 16px;
-
     border: none;
-
     border-radius: 12px;
-
     cursor: pointer;
-
     color: white;
-
     font-size: 16px;
     font-weight: bold;
-
     background: #3d1152;
 }
 
